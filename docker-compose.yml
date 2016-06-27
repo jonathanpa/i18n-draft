@@ -1,0 +1,8 @@
+postgresql:
+  image: postgres:9.4
+  volumes:
+    - /tmp/data/wagon/postgres:/var/lib/postgresql/data
+  environment:
+    - POSTGRES_PASSWORD=foo
+  ports:
+    - "5432:5432"
