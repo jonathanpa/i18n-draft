@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
-    @restaurants = Restaurant.all
+    @restaurants = policy_scope(Restaurant)
   end
 
   # GET /restaurants/1
@@ -14,7 +14,8 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/new
   def new
-    @restaurant = Restaurant.new
+    @restaurant = current_user.restaurants.new
+    authorize(@restaurant)
   end
 
   # GET /restaurants/1/edit
@@ -25,6 +26,7 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = current_user.restaurants.new(restaurant_params)
+    authorize(@restaurant)
 
     respond_to do |format|
       if @restaurant.save
@@ -65,6 +67,7 @@ class RestaurantsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant
       @restaurant = Restaurant.find(params[:id])
+      authorize(@restaurant)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
