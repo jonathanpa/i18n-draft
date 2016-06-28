@@ -7,6 +7,10 @@
 <p>
   <%= t(".clients", count: @restaurant.client_count) %>
 </p>
+<p>
+  <strong><%= t(".created_at") %>:</strong>
+  <%= l(@restaurant.created_at.to_date, format: :short) %>
+</p>
 
 <% if policy(@restaurant).edit? %>
   <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |

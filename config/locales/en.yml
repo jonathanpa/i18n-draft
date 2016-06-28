@@ -28,5 +28,6 @@ en:
         zero: "No client"
         one: "Only one client"
         other: "%{count} clients"
+      created_at: "Created at"
     create:
       created: "Restaurant %{name} was successfully created."
