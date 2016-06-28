@@ -23,5 +23,10 @@ en:
   restaurants:
     index:
       title: "List of Restaurants"
+    show:
+      clients:
+        zero: "No client"
+        one: "Only one client"
+        other: "%{count} clients"
     create:
       created: "Restaurant %{name} was successfully created."

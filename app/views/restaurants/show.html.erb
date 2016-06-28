@@ -4,6 +4,9 @@
   <strong>Name:</strong>
   <%= @restaurant.name %>
 </p>
+<p>
+  <%= t(".clients", count: @restaurant.client_count) %>
+</p>
 
 <% if policy(@restaurant).edit? %>
   <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
