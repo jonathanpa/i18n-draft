@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  restaurants:
+    index:
+      title: "List of Restaurants"
+    create:
+      created: "Restaurant %{name} was successfully created."

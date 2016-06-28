@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :restaurants
   devise_for :users
+
+  scope '(:locale)', locale: /fr|es/ do
+    resources :restaurants
+  end
+
   root to: 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
