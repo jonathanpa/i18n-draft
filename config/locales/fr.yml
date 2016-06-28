@@ -19,16 +19,40 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+fr:
+  activerecord:
+    models:
+      restaurant: "Resto"
+    attributes:
+      restaurant:
+        name: "Nom"
+        created_at: "Créé le"
   restaurants:
     index:
-      title: "List of Restaurants"
+      title: "Liste des restaurants"
     new:
-      title: "New Restaurant"
+      title: "Nouveau Restaurant"
     show:
       clients:
-        zero: "No client"
-        one: "Only one client"
+        zero: "Aucun client"
+        one: "Seulement un client"
         other: "%{count} clients"
     create:
-      created: "Restaurant %{name} was successfully created."
+      created: "Restaurant %{name} créé avec succès."
+  date:
+    abbr_month_names:
+      -
+      - Jan
+      - Fev
+      - Mar
+      - Avr
+      - Mai
+      - Jun
+      - Jul
+      - Aou
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+    formats:
+      short: "%d %b"

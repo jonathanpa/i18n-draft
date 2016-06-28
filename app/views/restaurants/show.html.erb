@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= Restaurant.human_attribute_name(:name) %>:</strong>
   <%= @restaurant.name %>
 </p>
 <p>
   <%= t(".clients", count: @restaurant.client_count) %>
 </p>
 <p>
-  <strong><%= t(".created_at") %>:</strong>
+  <strong><%= Restaurant.human_attribute_name(:created_at) %>:</strong>
   <%= l(@restaurant.created_at.to_date, format: :short) %>
 </p>
 
